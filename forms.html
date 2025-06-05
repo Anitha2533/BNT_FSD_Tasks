@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style>
+    body {
+  font-family: Arial;
+  background-color: lemonchiffon;
+  padding: 20px;
+}
+
+form {
+  background: burlywood;
+  padding: 20px;
+  width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px lightblue;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+}
+
+.gender-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.Course-group {
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  font-family: Arial;
+}
+
+.Course-group label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.Course-group input {
+  margin-right: 8px;
+}
+
+
+
+input[type="submit"],
+input[type="reset"],
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background:lightskyblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+  background: lightgoldenrodyellow;
+}
+
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+  <form autocomplete="on">
+    
+    <label for="Firstname">Name:</label>
+    <input type="text" id="Firstname" name="Firstname" required autofocus>
+    <label>Gender:</label>
+    <div class="gender-group">
+        <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+  </label><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="on" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="tel">Phone:</label>
+    <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" min="2000-01-01" max="2025-12-31">
+    <label>Course Interested:</label>
+    <div class="Course-group">
+        <label><input type="radio" name="Course" value="Full stack develpoment"> Full stack develpoment</label>
+      <label><input type="radio" name="Course" value="Devops"> Devops</label>
+      <label><input type="radio" name="Course" value="Digital Marketing"> Digital Marketing</label>
+    </div>
+
+    <label for="Joiningmonth">Joining Month:</label>
+    <input type="Joiningmonth" id="Joingmonth" name="Joiningmonth" min="january" max="March">
+
+    <label for="week">Select Week:</label>
+    <input type="week" id="week" name="week">
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time">
+
+    <label for="year">Select Year:</label>
+    <select name="year" id="year">
+      <option value="">--Select Year--</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+    </select>
+
+    <label for="github url">Website URL:</label>
+    <input type="url" id="url" name="url">
+
+    <label for="file">Upload File:</label>
+    <input type="file" id="file" name="file" min="1" max="3" required>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="alert('Form Preview!')">Preview</button>
+
+  </form>
+</body>
+</html>

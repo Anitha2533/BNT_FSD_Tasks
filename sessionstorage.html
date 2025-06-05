@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form">
+  Name: <input id="name" required><br>
+  Email: <input id="email" type="email" required><br>
+  <button type="submit">Save</button>
+</form>
+
+<script>
+  form.onsubmit = e => {
+    e.preventDefault();
+    sessionStorage.setItem("name", name.value);
+    sessionStorage.setItem("email", email.value);
+    alert("Saved!");
+  }
+</script>
+
+</body>
+</html>
