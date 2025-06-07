@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Management Dashboard - Sidebar</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: linen;
+      color: #333;
+      display: flex; 
+      min-height: 100vh;
+    }
+
+    nav.sidebar {
+      background-color: lightgray;
+      width: 220px;
+      padding-top: 20px;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      box-shadow: 2px 0 5px blueviolet;
+    }
+
+    nav.sidebar a {
+      display: block;
+      padding: 15px 25px;
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+      border-left: 4px solid transparent;
+      
+    }
+
+    nav.sidebar a:hover {
+      background-color: white;
+      color: crimson;
+      border-left-color: crimson;
+    }
+
+    nav.sidebar a:visited {
+      color: darkgreen;
+    }
+
+    nav.sidebar a.active {
+      background-color: white;
+      border-left-color: darkblue;
+      color: darkblue;
+    }
+
+  
+    main {
+      margin-left: 220px; 
+      padding: 30px;
+      flex-grow: 1;
+      max-width: 800px;
+    }
+
+  
+
+    section {
+      background-color: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px wheat;
+    }
+
+    h2, h3 {
+      color: lightslategray;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid lavenderblush;
+      border-radius: 3px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: lightslategray;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: greenyellow;
+    }
+    @media screen and (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+      nav.sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      main {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 20px;
+      }
+      nav.sidebar a {
+        display: inline-block;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+      }
+      nav.sidebar a:hover {
+        border-left: none;
+        border-bottom-color: crimson;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <a href="#overview" class="active">Overview</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Team</a>
+    <a href="#sales">Sales</a>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <main>
+   
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>This dashboard shows important information for managing an e-commerce or business team effectively.</p>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li>Inventory Management System</li>
+        <li>Online Store Website</li>
+        <li>Customer Feedback App</li>
+      </ul>
+    </section>
+
+    <section id="team">
+      <h3>Team</h3>
+      <ul>
+        <li>Product Managers: 3</li>
+        <li>Sales Executives: 10</li>
+        <li>Support Staff: 5</li>
+      </ul>
+    </section>
+
+    <section id="sales">
+      <h3>Sales</h3>
+      <ol>
+        <li>January: $50,000</li>
+        <li>February: $60,000</li>
+        <li>March: $70,000</li>
+      </ol>
+    </section>
+
+    <section id="feedback">
+      <h3>Feedback Form</h3>
+      <form>
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="name" required><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="email" required><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" placeholder="feedback" required></textarea><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
