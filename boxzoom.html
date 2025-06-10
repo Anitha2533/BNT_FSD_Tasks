@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Transition Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: crimson;
+      color: white;
+      line-height: 150px;
+      margin: auto;
+      border-radius: 10px;
+      transition: all 5s ease; 
+    }
+
+    .box:hover {
+      background-color: dodgerblue;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Transition Demo</h2>
+  <div class="box">Hover me</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 300vh;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    h2 {
+      text-align: center;
+      background-color: #dfe6e9;
+      padding: 20px;
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      border-bottom: 2px solid #b2bec3;
+    }
+
+    /* Fixed Box */
+    .fixed-box {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      width: 120px;
+      height: 120px;
+      background: #e84393;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border: 3px solid #c23616;
+      z-index: 1000;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Outer Container */
+    .outer-container {
+      width: 85%;
+      max-width: 1000px;
+      margin: 160px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border: 2px solid #2d3436;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Inner Container 1 */
+    .inner-container-1 {
+      position: relative;
+      background-color: #dfe6e9;
+      padding: 20px;
+      border: 2px dashed #636e72;
+      border-radius: 10px;
+      margin-bottom: 50px;
+    }
+
+    /* Relative Box (Parent) */
+    .relative-box {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #00cec9;
+      border: 3px solid #0984e3;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Absolute Box (1st inside relative) */
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #fdcb6e;
+      border: 2px solid #e17055;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d3436;
+    }
+
+    /* 3rd Box (inside the above absolute) */
+    .nested-absolute-box {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 60px;
+      height: 60px;
+      background-color: #6c5ce7;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+    }
+
+    /* Sticky Box */
+    .sticky-box {
+      position: sticky;
+      top: 10px;
+      width: 150px;
+      height: 120px;
+      background-color: #55efc4;
+      border: 3px solid #00b894;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #2d3436;
+      margin: 40px auto;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Inner Container 2 */
+    .inner-container-2 {
+      background-color: #ffeaa7;
+      height: 600px;
+      padding: 20px;
+      border: 2px dotted #fdcb6e;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Positioning Layout</h2>
+
+  <div class="fixed-box">Fixed Box</div>
+
+  <div class="outer-container">
+
+    <!-- Container 1 -->
+    <div class="inner-container-1">
+
+      <!-- Relative Box -->
+      <div class="relative-box">
+        Relative Box
+
+        <!-- Absolute Box inside Relative -->
+        <div class="absolute-box">
+          1st Box
+
+          <!-- 3rd Box inside 1st Box -->
+          <div class="nested-absolute-box">3rd Box</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Box -->
+    <div class="sticky-box">Sticky Box</div>
+    
+    <!-- Container 2 -->
+    <div class="inner-container-2">
+      <p>Scroll to see sticky and fixed effects in action.</p>
+      <p>This container has enough height to show sticky behavior when you scroll.</p>
+    </div>
+  </div>
+
+</body>
+</html>

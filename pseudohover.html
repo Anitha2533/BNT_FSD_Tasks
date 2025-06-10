@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Elements Hover</title>
+  <style>
+    .hover-box {
+      font-size: 20px;
+      color: black;
+      margin: 20px;
+      display: inline-block;
+      padding: 10px;
+      border: 2px solid #000;
+      position: relative;
+    }
+
+    .hover-box::before {
+      content: "👉 ";
+      color: green;
+    }
+
+    .hover-box::after {
+      content: " 🔚";
+      color: red;
+    }
+
+    .hover-box:hover {
+      background-color: yellow;
+      color: blue;
+      cursor: pointer;
+    }
+
+    .hover-box:hover::before {
+      content: "🔥 ";
+      color: orange;
+    }
+
+    .hover-box:hover::after {
+      content: " 🎯";
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-box">Hover Me!</div>
+</body>
+</html>
