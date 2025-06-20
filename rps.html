@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+<script>
+  const choices = ["rock", "paper", "scissors"];  
+  let user = prompt("Type rock, paper, or scissors");
+
+
+  user = user?.toLowerCase();
+
+
+  if (!choices.includes(user)) {
+    alert("Invalid input! Please enter only 'rock', 'paper', or 'scissors'.");
+  } else {
+    let rand = Math.random(); 
+    let index = Math.floor(rand * choices.length); 
+    let computer = choices[index];
+
+    alert("Random value: " + rand.toFixed(2) + "\nComputer chose: " + computer);
+
+    if (confirm("You chose " + user + "\nDo you want to continue?")) {
+      let result = "";
+
+      if (user === computer) {
+        result = "It's a tie!";
+      } else if (
+        (user === "rock" && computer === "scissors") ||
+        (user === "paper" && computer === "rock") ||
+        (user === "scissors" && computer === "paper")
+      ) {
+        result = "You Win!";
+      } else {
+        result = "You Lose!";
+      }
+
+      alert("Computer chose: " + computer + "\nResult: " + result);
+    } else {
+      alert("Game Cancelled");
+    }
+  }
+</script>
+
+</body>
+</html>
