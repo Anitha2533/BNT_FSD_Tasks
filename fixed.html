@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let number = 78.23653;
+console.log(number.toFixed(2));
+let fruit = "apple";
+
+switch (fruit) {
+  case "apple": {
+    const a = 10;
+    console.log("Apple value: " + a);
+    break;
+  }
+  case "banana": {
+    let b = 20;
+    console.log("Banana value: " + b);
+    break;
+  }
+  default: {
+    var d = 5;
+    console.log("Default: " + d);
+  }
+}
+let arr = [10, 20, 30];
+arr.push(40);      
+arr.pop();         
+arr.unshift(5);    
+arr.shift();       
+let nums = [1, 2, 3];
+nums.forEach(function(n) {
+  console.log(n * 2);
+});
+let items = ["pen", "pencil", "eraser"];
+items.splice(1, 1); 
+let fruits = ["apple", "banana"];
+fruits.splice(1, 0, "orange"); 
+let a1 = [1, 2];
+let a2 = [3, 4];
+let both = a1.concat(a2); 
+let student = {
+  name: "Ram",
+  marks: {
+    math: 90,
+    science: 85
+  }
+};
+console.log(student.marks.math); 
+let person = {
+  name: "Anitha",
+  age: 22
+};
+console.log(person.name);
+
+</script>
+</body>
+</html>

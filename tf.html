@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Truthy-Falsy Game</title>
+</head>
+<body>
+<script> 
+  alert("Welcome to the Truthy-Falsy Game!");
+  alert("Guess if the shown value is truthy or falsy.\nType only: truthy or falsy.");
+  const testValues = [
+    ["false", false],
+    ["0", 0],
+    ["empty string", ""],
+    ["null", null],
+    ["undefined", undefined],
+    ["NaN", NaN],
+    ["true", true],
+    ["1", 1],
+    ["'hello'", "hello"],
+    ["empty array []", []],
+    ["empty object {}", {}],
+    ["'0'", "0"],
+    ["'-1'", "-1"]
+  ];
+ let score = 0;
+  for (let i = 0; i < testValues.length; i++) {
+    let label = testValues[i][0];      
+    let value = testValues[i][1];      
+    let guess = prompt(`Is "${label}" truthy or falsy?`).toLowerCase();
+    let isTruthy = Boolean(value);
+    if ((isTruthy && guess === "truthy") || (!isTruthy && guess === "falsy")) {
+      alert("Correct!");
+      score++;
+    } else {
+      alert("Wrong! It is actually: " + (isTruthy ? "truthy" : "falsy"));
+    }
+  }
+  alert(`Game Over! \nYour Score: ${score} out of ${testValues.length}`);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Splice Example</title>
+</head>
+<body>
+  <button onclick="useSplice()">Splice</button>
+
+  <script>
+    function useSplice() {
+      let fruits = ["apple", "banana", "cherry", "orange"];
+      alert("Original array: " + fruits);
+
+      let removed = fruits.splice(2, 1);
+      
+      alert("Removed item: " + removed);
+      alert("Updated array: " + fruits);
+    }
+  </script>
+</body>
+</html>

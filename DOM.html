@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple DOM Example</title>
+  <style>
+    .message {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="title">Welcome!</h2>
+  <p class="message">This is a paragraph.</p>
+  <p class="message">This is another paragraph.</p>
+
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      
+      document.getElementById("title").innerHTML = "Title Changed!";
+
+      
+      let items = document.getElementsByClassName("message");
+      for (let i = 0; i < items.length; i++) {
+        items[i].innerHTML = "Paragraph changed using class!";
+      }
+    }
+  </script>
+
+</body>
+</html>
