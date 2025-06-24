@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1 id="title">Welcome!</h1>
+  <p id="message">Click the button to change this text</p>
+  <button id="changeBtn">Change Content</button>
+
+  <script>
+    $(document).ready(function() {
+      $("#changeBtn").click(function() {
+        $("#title").text("Hello Everyone");
+        $("#message").html("<b>Text has been maniplates using jQuery!</b>");
+        $("#message").css("color", "blue");
+      });
+    });
+  </script>
+</body>
+</html>

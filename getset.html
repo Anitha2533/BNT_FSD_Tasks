@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+</script>
+<input id="first_name" type="text" value="Abirami">
+<input id="last_name" type="text" value="G"><br><br>
+<button id="get">GET Value</button>
+<button id="set">SET Value</button>
+
+<script>
+$('#get').click(function(){
+  const f = $('#first_name').val();
+  const l = $('#last_name').val();
+  alert(`${f} ${l}`);
+});
+
+$('#set').click(function(){
+  $('#first_name').val('Arikaran');
+  $('#last_name').val('G');
+});
+</script>
+</body>
+</html>

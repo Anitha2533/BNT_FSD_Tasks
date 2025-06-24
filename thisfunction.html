@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>this</title>
+</head>
+<body>
+<script>
+  const person = {
+    name: "Anitha",
+    normalFunc: function() {
+      console.log("Normal Function this.name:", this.name);
+    },
+    arrowFunc: () => {
+      console.log("Arrow Function this.name:", this.name);
+    }
+  };
+  person.normalFunc(); 
+  person.arrowFunc();  
+</script>
+
+</body>
+</html>
+

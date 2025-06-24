@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Events</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+
+  <h2 id="msg">Hello!</h2>
+  <button id="myBtn">Click Me</button>
+
+  <script>
+    $("#myBtn").click(function() {
+      $("#msg").text("Button clicked!");
+    });
+  </script>
+
+</body>
+</html>

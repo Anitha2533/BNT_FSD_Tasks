@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Try Catch Finally Example</title>
+</head>
+<body style="font-family:Arial; text-align:center; text-size-adjust: 10px; margin-top:50px;">
+
+  <h2>Check Age (Try-Catch-Finally)</h2>
+  <button onclick="checkAge()">Check Age</button>
+
+  <p id="output"></p>
+
+  <script>
+    function checkAge() {
+      let output = document.getElementById("output");
+      try {
+        let age = prompt("Enter your age:");
+        if (age === null) throw "Input cancelled";
+        if (age.trim() === "") throw "Age is required";
+        if (isNaN(age)) throw "Please enter a number";
+        if (age < 18) throw "You must be 18 or older";
+        output.innerHTML = "Access granted ";
+      } catch (error) {
+        output.innerHTML = "Error: " + error;
+      } finally {
+        console.log("Validation complete.");
+      }
+    }
+  </script>
+
+</body>
+</html>

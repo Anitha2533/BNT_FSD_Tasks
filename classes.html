@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Class Control</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      color: white;
+      background-color: green;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+
+  <h2 id="text">Hello jQuery!</h2>
+
+  <button onclick="addHighlight()">Add Class</button>
+  <button onclick="removeHighlight()">Remove Class</button>
+  <button onclick="toggleHighlight()">Toggle Class</button>
+
+  <script>
+    function addHighlight() {
+      $("#text").addClass("highlight"); // Adds class
+    }
+
+    function removeHighlight() {
+      $("#text").removeClass("highlight"); // Removes class
+    }
+
+    function toggleHighlight() {
+      $("#text").toggleClass("highlight"); // Toggles class on/off
+    }
+  </script>
+
+</body>
+</html>
