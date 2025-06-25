@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown & Stopwatch</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:50px;">
+  <h2>Countdown Timer</h2>
+  <h1 id="countdown">10</h1>
+  <button onclick="startCountdown()">Start Countdown</button>
+  <hr style="margin:40px 0;">
+  <h2>Stopwatch</h2>
+  <h1 id="stopwatch">00:00:00</h1>
+  <button onclick="startStopwatch()">Start</button>
+  <button onclick="stopStopwatch()">Stop</button>
+  <button onclick="resetStopwatch()">Reset</button>
+  <script>
+    let countdownValue = 10;
+    let countdownInterval;
+
+    function startCountdown() {
+      countdownValue = 10;
+      document.getElementById("countdown").textContent = countdownValue;
+
+      countdownInterval = setInterval(function () {
+        countdownValue--;
+        document.getElementById("countdown").textContent = countdownValue;
+
+        if (countdownValue === 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("countdown").textContent = "Time's up!";
+        }
+      }, 1000);
+    }
+    let stopwatchSeconds = 0;
+    let stopwatchInterval;
+    function formatTime(seconds) {
+      let hrs = Math.floor(seconds / 3600);
+      let mins = Math.floor((seconds % 3600) / 60);
+      let secs = seconds % 60;
+      return (
+        (hrs < 10 ? "0" + hrs : hrs) + ":" +
+        (mins < 10 ? "0" + mins : mins) + ":" +
+        (secs < 10 ? "0" + secs : secs)
+      );
+    }
+    function startStopwatch() {
+      stopwatchInterval = setInterval(function () {
+        stopwatchSeconds++;
+        document.getElementById("stopwatch").textContent = formatTime(stopwatchSeconds);
+      }, 1000);
+    }
+    function stopStopwatch() {
+      clearInterval(stopwatchInterval);
+    }
+    function resetStopwatch() {
+      clearInterval(stopwatchInterval);
+      stopwatchSeconds = 0;
+      document.getElementById("stopwatch").textContent = "00:00:00";
+    }
+  </script>
+</body>
+</html>
